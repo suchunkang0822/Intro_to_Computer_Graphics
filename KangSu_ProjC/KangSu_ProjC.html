@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Project_C</title>
+</head>
+<body onload="main()">
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat.js"></script>
+    <script src="lib/materials_Ayerdi.js"></script>
+    <script src="KangSu_ProjC.js"></script>
+
+    <canvas id="webgl"></canvas>
+        <div>
+
+            <table align="right">
+                <tr>
+                    <td>2nd Light: </td>
+                    <td>X: <input type="range" id="PX" value="-2.0" min="-10" max="10"/></td>
+                    <td>Y: <input type="range" id="PY" value="2.0" min="-10" max="10"/></td>
+                    <td>Z: <input type="range" id="PZ" value="5.0" min="-10" max="10"/></td>
+                </tr>
+                <tr>
+                    <td>Diffuse: </td>
+                    <td>R: <input type="range" id="DR" value="0.2" min="-10" max="10"/></td>
+                    <td>G: <input type="range" id="DG" value="0.6" min="-10" max="10"/></td>
+                    <td>B: <input type="range" id="DB" value="0.7" min="-10" max="10"/></td>
+                </tr>
+                <tr>
+                    <td>Specular: </td>
+                    <td>R: <input type="range" id="SR" value="1.0" min="-10" max="10"/></td>
+                    <td>G: <input type="range" id="SG" value="0.8" min="-10" max="10"/></td>
+                    <td>B: <input type="range" id="SB" value="1.0" min="-10" max="10"/></td>
+                </tr>
+                <tr>
+                    <td>Ambient: </td>
+                    <td>R: <input type="range" id="AR" value="0.5" min="-10" max="10"/></td>
+                    <td>G: <input type="range" id="AG" value="0.5" min="-10" max="10"/></td>
+                    <td>B: <input type="range" id="AB" value="0.5" min="-10" max="10"/></td>
+                </tr>
+                <tr>
+                    <td id="lMode">Lighting Mode: Phong</td>
+                </tr>
+
+        </div>
+            <table>
+
+                <h1>User Direction</h1>
+                <p>Strafe<br>Left:A, Right: D, Up: W, Down: S</p>
+                <p>Move<br>Left: left arrow, Right: right arrow, Up: up arrow, down: down arrow</p>
+                <p>Light Mode<br>Press "m" to change the light mode (mode shown on the right)</p>
+                <p>World Light Switch<br>Press space bar to turn on and off</p>
+                <p>Head Light Switch<br>Press H key to turn on and off</p>
+                <p>Adjust the 2nd light, diffuse, specular, ambient with the slider on the right</p>
+             
+            </table>
+
+    
+</body>
+</html>
+
+
