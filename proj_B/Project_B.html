@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Project B</title>
+  </head>
+
+  <body onload="main()" onresize="drawResize()">
+		<!--Create the HTML5 'canvas' element in which we will run WebGL -->
+    <canvas id="webgl" width="1000" height="500">   <! Set initial canvas size in pixels. ErrMsg. -->
+    Please use a browser that supports HTML-5 "canvas"
+    </canvas>
+
+<!--- BEGIN  --  GUI reporting------------------------------------------------------------>
+	<br>
+	<b><font size="6">User Instruction </font></b>
+	<br/>
+	<br/>
+	To change your viewing direction, press directional keys as follows <br/><br/>
+	UP: to view upward <br/>
+	Down: to view downard <br/>
+	Left: to view left<br/>
+	Right: to view Rightward  
+	<br>
+	<span style="display:inline-block; width: YOURWIDTH;"></span>
+	<br>
+	To change position of your camera, press keys as follows<br/><br/>
+	A: to move left  <br/>
+	D: to view Right <br/>
+	W: to move forward<br/>
+	S: to view Backward
+	<br>
+
+	<br>The mouse movement can maneuver the hammer looking figure <br>
+
+
+	   <button type="button" onclick="buttonRunStop()" >Run/Stop</button>
+<hr> <!-- Draw a horizontal-line separator------------->
+
+	Try keyboard & mouse click/drag inside the canvas, and:
+		<br>
+		<span id='KeyDownResult'  > KeyDown:    </span> <!-- myKeyDown() modifies this span object -->		<br>
+		<span id='KeyModResult'   > KeyMod :    </span> <!-- myKeyDown() modifies this span object -->
+		<br>
+		<span id='MouseAtResult'  >   Mouse At: </span> <!-- myMouseMove() modifies this span object -->
+		<br>
+		<span id='MouseDragResult'> Mouse Drag: </span> <!-- myMouseUp() modifies this span object -->
+<!-- <br>
+			   <button type="button" onclick="buttonClearDragTot()" >Clear Drag Totals</button>
+<br> -->
+<!---  END   --  GUI reporting------------------------------------------------------------>
+<! Load webGL-supplied libraries  >
+    <script src="lib/webgl-utils.js"></script>  
+    <script src="lib/webgl-debug.js"></script>
+<! Load our textbook-supplied libraries>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat03.js"></script>
+
+<! Load OUR 3D graphics drawing program: lib1 by Vincent Bommier, 2018>
+		<script src="lib1.js"></script> <! to simplify drawing colorful triangles in 3D>
+
+    <script src="Project_B.js"></script>  <! OUR program >
+
+  </body>
+</html>
