@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kang_pojA05 </title>
+  </head>
+
+  <body onload="main()">
+		<!--Create the HTML5 'canvas' element in which we will run WebGL -->
+    <canvas id="webgl" width="400" height="400">   <! Set initial canvas size in pixels. ErrMsg. -->
+    Please use a browser that supports HTML-5 "canvas"
+    </canvas>
+
+<!--- BEGIN  --  GUI reporting------------------------------------------------------------>
+	<br>
+	Open Console, please: (right-click-->'Inspect Element'-->'Console' tab
+	<br>
+	   <button type="button" onclick="buttonRunStop()" >Run/Stop</button>
+<hr> <!-- Draw a horizontal-line separator------------->
+
+	Try keyboard & mouse click/drag inside the canvas, and:
+	<div> Click on Canvas to change the angle spinning </div>
+		<br>
+     <span id='KeyPressResult' > KeyPress: </span> <!-- myKeyPress() modifies this span object -->   <br>
+    <span id='KeyDownResult'  > KeyDown : </span> <!-- myKeyDown() modifies this span 
+		<span id='MouseAtResult'> Mouse At:   </span> <!-- myMouseMove() modifies this span object -->
+		<br>
+		<span id='MouseDragResult'> Mouse Drag: </span> <!-- myMouseUp() modifies this span object -->
+<br>
+			   <button type="button" onclick="buttonClearDragTot()" >Clear Drag Totals</button>
+<br>
+<!---  END   --  GUI reporting------------------------------------------------------------>
+<! Load webGL-supplied libraries  >
+    <script src="lib/webgl-utils.js"></script>  
+    <script src="lib/webgl-debug.js"></script>
+<! Load our textbook-supplied libraries>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat03.js"></script>
+
+<! Load OUR 3D graphics drawing program: lib1 by Vincent Bommier, 2018>
+		<script src="lib1.js"></script> <! to simplify drawing colorful triangles in 3D>
+
+    <script src="Kang_pojA05.js"></script>  <! OUR program >
+
+  </body>
+</html>
